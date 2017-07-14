@@ -5,20 +5,7 @@ tftp server for Docker
 docker build --rm --tag=rmartini/tftp .
 ```
 
-To run
-
-```
-docker run -p 0.0.0.0:69:69/udp -i -t rmartini/tftp
-```
-
-Mounts the following volume for persistent data
-
-```
-/opt/tftpboot
-```
-
-To map the volume to a host directory
-
+To run and mount the `/opt/tftpboot` as tftp folder:
 ```
 docker run -p 0.0.0.0:69:69/udp -v /opt/tftpboot:/var/tftpboot -i -t rmartini/tftp
 ```
